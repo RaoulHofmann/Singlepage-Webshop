@@ -1,0 +1,291 @@
+h1{
+	text-align: center;
+}
+
+header {
+    position: relative;
+	width: 100%;
+}
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+body{
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	color: #666666;
+}
+
+nav {
+    overflow: hidden;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	position: relative;
+    top: 8px;
+    left: 16px;
+    width: 100%;
+}
+
+nav ul{
+	margin: 33px;
+    padding: 0;
+}
+
+nav ul li{
+    list-style-type: none;
+}
+
+nav > ul > li > a{
+    float: left;
+    font-size: 16px;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.dropdown {
+    float: left;
+   	overflow: hidden;
+}
+
+.dropdown .dropbtn {
+    font-size: 16px;    
+    border: none;
+    outline: none;
+    color: black;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+
+nav > ul > li > a:hover, .dropdown:hover .dropbtn {
+	background-color: #c39d6d;
+}
+
+.dropdown-content {
+    display: none;
+    position: fixed;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+   	float: none;
+   	color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #c39d6d;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.active {
+	background-color: #c39d6d;
+}
+
+nav input[type=text] {
+    float: right;
+    padding: 6px;
+    border: 1;
+    margin-top: 8px;
+    font-size: 17px;
+}
+
+nav button {
+	float: right;
+	padding: 6px 10px;
+	margin-top: 8px;
+	margin-right: 16px;
+	background: #ddd;
+	font-size: 17px;
+	border: 1;
+	cursor: pointer;
+}
+
+nav button:hover {
+	background: #ccc;
+}
+
+.logo-img {
+    float: left;
+    position: relative;
+    margin: 10px 15px 15px 10px;
+}
+
+#copy {
+	text-align: center;
+	font-style: italic;
+}
+
+footer {
+	background-color: #F1F1F1;
+}
+
+.feature-block {
+	text-align: center;
+	width: 90%; 
+	border: 0;
+}
+
+.feature-block td {
+	width: 300px;
+	height: 300px;
+	text-align: center;
+}
+
+.table-center-size {
+	text-align: center;
+	width: 90%; 
+	border: 0;
+}
+
+.table-center-size img {
+	width: 300px;
+	height: 300px;
+	text-align: center;
+}
+
+.table-center-size td {
+	width: 300px;
+	height: 300px;
+	text-align: center;
+	border: 1px solid black;
+}
+
+.container {
+	width: 750px;
+	padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.login {
+	float: left;
+	clear: left;
+	background-color: #F3F3F3;
+}
+
+.register {
+	float: right;
+	clear: right;
+	background-color: #F3F3F3;
+}
+
+.login-reg {		
+	text-align: center;
+}
+
+.form-control {
+    color: #666666;
+    font-weight: 400;
+    letter-spacing: 0.03em;
+    border: 1px solid #ebebeb;
+    border-radius: 0;
+    min-height: 25px;
+    box-shadow: none;
+	-webkit-appearance: none;
+	display: inline;
+    width: 60%;
+    height: 17px;
+    padding: 3px 6px;
+    font-size: 14px;
+    line-height: 1.42857143;
+	transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+
+.form-button{
+	color: white;
+    background: #c39d6d;
+    border: 2px solid #c39d6d;
+	border-radius: 5px !important;
+	font-weight: 400;
+    font-size: 13px;
+    letter-spacing: 0.05em;
+	padding: 10px 18px;
+    margin: 5px;
+}
+
+a {
+    color: #c39d6d;
+    letter-spacing: 0.05em;
+    font-weight: 500;
+    outline: 0 !important;
+	background-color: transparent;
+}
+
+.alert, .updateAlert {
+    padding: 20px;
+    background-color: #f44336;
+    color: white;
+    display: none;
+    text-align: center;
+}
+
+.success {
+    padding: 20px;
+    background-color: green;
+    color: white;
+    display: none;
+    text-align: center;
+}
+
+.closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.closebtn:hover {
+    color: black;
+}
+
+.hidden {
+    display:none;
+    visibility:hidden;
+}
+
+.about_company article{
+	text-align: center;
+}
+
+.about_team section {
+	width: 50%; 
+	float: left;
+	text-align: center;
+}
+
+.contact section {
+	width: 33.3%; 
+	float: left;
+	text-align: center;
+}
+
+.alignright {
+	float: right;
+}
+
+label {
+	display: inline-block;
+	width: 200px;
+	text-align: right;
+}​
+

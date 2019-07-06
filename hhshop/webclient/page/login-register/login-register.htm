@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" >
+	<head>
+		<meta charset="UTF-8">
+		<title>Login / Register</title>
+		<link rel="stylesheet" href="../../css/style.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<script src="login-register.js"></script>
+	</head>
+	<body onload="checkLogin();">
+		<header>
+			<nav>
+				<a href="../home/home.htm"><img class="logo-img" src="../../img/logo.jpg" width="100" height="100"/></a>
+				<ul>
+					<li><a href="../home/home.htm">HOME</a></li>
+					<li><a href="../about-contact/about-contact.htm#about">ABOUT</a></li>
+					<li>
+						<div class="dropdown">
+							<button class="dropbtn">SHOP <i class="fa fa-caret-down"></i></button>
+							<div class="dropdown-content">
+								<a href="../shop/shop.htm#2">KEYBOARD</a>
+								<a href="../shop/shop.htm#3">MOUSE</a>
+								<a href="../shop/shop.htm#1">COMBO</a>
+							</div>
+						</div>
+					</li>
+					<li><a href="../about-contact/about-contact.htm#contact">CONTACT</a></li>
+					<li>
+						<form class="searchbar" id="searchbar" action="javascript:search();">
+							<button type="submit"><i class="fa fa-search"></i></button>
+							<input type="text" placeholder="Search.." name="search">
+						</form>
+					</li>
+					<li><a href="../shop/shop.htm#cart" style="float:right"><i class="fa fa-shopping-cart"></i></a></li>
+					<li><a class="active" href="../login-register/login-register.htm" style="float:right"><i class="fa fa-user"></i></a></li>
+				</ul>
+			</nav>
+            <div class="alert">
+                <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+                Log-in Failed
+            </div>
+		</header><hr/>
+		<div class="container">
+			<section class="section login" id="section login">
+				<h1>L O G I N</h1>
+				<form class="login-reg" id="login" action="javascript:login();" method="post">
+					<input type="text" class="form-control"name="username" id="username" placeholder="USERNAME"/></br>
+					<input type="password" class="form-control" name="password" id="password" placeholder="PASSWORD"/></br>	
+					<input type="submit" class="form-button" name="submit" value="Submit"/>
+				</form>
+			</section>
+			<section class="section register" id="section register">
+				<h1>R E G I S T R A T I O N</h1>
+				<form class="login-reg" id="register" action="javascript:register();" method="post">
+                    <p id="errormsg"></p>
+                    <input type="text" class="form-control" name="registerusername" id="registerusername" placeholder="USERNAME"/></br>
+					<input type="password" class="form-control" name="registerpassword" id="registerpassword" placeholder="PASSWORD"/></br>
+					<input type="password" class="form-control" name="registerpassword2" id="registerpassword2" placeholder="CONFIRM PASSWORD"/></br>
+					<input type="text" class="form-control" name="firstname" id="firstname" placeholder="FIRST NAME"/></br>					
+					<input type="text" class="form-control" name="lastname" id="lastname" placeholder="LAST NAME"/></br>					
+					<input type="text" class="form-control" name="email" id="email" placeholder="EMAIL"/></br>
+					<input type="text" class="form-control" name="street" id="street" placeholder="STREET"/></br>
+					<input type="text" class="form-control" name="postcode" id="postcode" placeholder="POSTCODE"/></br>
+					<input type="text" class="form-control" name="city" id="city" placeholder="CITY"/></br>
+                    <select id="country">
+                    </select>
+					</br>
+					<input type="submit" class="form-button" name="submit" value="Submit"/>
+				</form>
+			</section>
+            <section class="hidden" id="section logged in">
+                <h1>A C C O U N T &nbsp; I N F O R M A T I O N</h1>
+                <div class="updateAlert">
+                    <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+                </div>
+                <div class="success">
+                    <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> Update successful
+                </div></br>
+				<div class="logout">
+					<span class="form-button" onclick="logout();">LOGOUT</span>
+				</div></br>
+                <div class="hidden" id="productAdmin">
+                    <span class="form-button" onclick="productAdmin();">SHOP PRODUCT</span>
+                </div></br>
+                <div class="hidden" id="userAdmin">
+                    <span class="form-button" onclick="userAdmin();">USER ADMIN</span>
+                </div></br>
+                <form id="updateUser" action="javascript:updateUser();" method="post">
+					<div class="block">
+						<label>Username: </label>
+						<input type="text" class="form-control" name="updateUsername" id="username" placeholder="USERNAME" disabled/></br>
+					</div>
+					<div class="block">
+						<label>Password: </label>
+						<input type="password" class="form-control" name="updatePassword" id="password" placeholder="PASSWORD"/></br>
+					</div>
+					<div class="block">
+						<label>Confirm Password: </label>
+						<input type="password" class="form-control" name="updatePassword2" id="password2" placeholder="CONFIRM PASSWORD"/></br>
+					</div>
+					<div class="block">
+						<label>First Name: </label>
+						<input type="text" class="form-control" name="updateFirstname" id="firstname" placeholder="FIRST NAME"/></br>
+					</div>
+					<div class="block">
+						<label>Last Name: </label>
+						<input type="text" class="form-control" name="updateLastname" id="lastname" placeholder="LAST NAME"/></br>
+					</div>
+					<div class="block">
+						<label>Email: </label>
+						<input type="text" class="form-control" name="updateEmail" id="email" placeholder="EMAIL"/></br>
+					</div>
+					<div class="block">
+						<label>Street: </label>
+						<input type="text" class="form-control" name="updateStreet" id="street" placeholder="STREET"/></br>
+					</div>
+					<div class="block">
+						<label>Postcode: </label>
+						<input type="text" class="form-control" name="updatePostcode" id="postcode" placeholder="POSTCODE"/></br>
+					</div>
+					<div class="block">
+						<label>City: </label>
+						<input type="text" class="form-control" name="updateCity" id="city" placeholder="CITY"/></br>
+					</div>
+                    <div style="text-align:center;">
+						<input type="submit" class="form-button" name="submit" value="UPDATE"/>
+					</div>
+                </form>
+            </section>
+            <section class="hidden" id="section productAdmin">
+                <h1>S H O P &nbsp; P R O D U C T</h1>
+                <div class="hidden" id="backAccountProduct">
+                    <span class="form-button" onclick="checkLogin();"><i class="fa fa-arrow-left"></i></span>
+                </div></br>
+                <div class="hidden" id="addProduct">
+                    <span class="form-button" onclick="addProductSection();">ADD NEW PRODUCT</span>
+                </div></br>
+                <table align="center" class="productTable" id="productTable"></table>
+            </section>
+            <section class="hidden" id="section addProduct">
+                <h1>A D D &nbsp; P R O D U C T</h1>
+                <div class="hidden" id="backProductAdmin">
+                    <span class="form-button" onclick="productAdmin();"><i class="fa fa-arrow-left"></i></span>
+                </div></br>
+                <table align="center" class="addProductTable" id="addProductTable"></table>
+            </section>
+            <section class="hidden" id="section userAdmin">
+                <h1>U S E R &nbsp; A D M I N</h1>
+                <div class="hidden" id="backAccountUser">
+                    <span class="form-button" onclick="checkLogin();"><i class="fa fa-arrow-left"></i></span>
+                </div></br>
+                <div class="hidden" id="addUser">
+                    <span class="form-button" onclick="addUserSection();">ADD USER ADMIN</span>
+                </div></br>
+                <table align="center" class="userTable" id="userTable"></table>
+            </section>
+            <section class="hidden" id="section addUser">
+                <h1>A D D &nbsp; A D M I N &nbsp; U S E R</h1>
+                <div class="hidden" id="backUserAdmin">
+                    <span class="form-button" onclick="userAdmin();"><i class="fa fa-arrow-left"></i></span>
+                </div></br>
+                <table align="center" class="addUserTable" id="addUserTable"></table>
+            </section>
+		</div>
+		<footer>
+			<table align="center" width="90%">
+				<tr>
+					<td><img src="../../img/logo.jpg" width="50" height="50"/></td>
+					<td colspan="2"><b>BRANDS</b></td>
+					<td><b>CONTACT</b></td>
+				</tr>
+				<tr>
+					<td rowspan="9">H&H leads with the Outcome – “brings all your communication together”.</td>
+					<td><a href="http://www.rapoo.com/">RAPOO</a></td>
+					<td><a href="http://www.gamdias.com/">GAMDIAS</a></td>
+					<td><i class="fa fa-location-arrow" style="font-size:24px;color: #c39d6d;"></i> &nbsp;: 90 South St, Murdoch WA 6150</td>
+				</tr>
+				<tr>
+					<td><a href="https://www.logitech.com/en-au/mice">LOGITECH</a></td>
+					<td><a href="https://au.msi.com/">MSI</a></td>
+					<td><i class="fa fa-phone" style="font-size:24px;color: #c39d6d;"></i> &nbsp;: <a href="tel:+61812345678">(08) 1234 5678</a></td>
+				</tr>
+				<tr>
+					<td><a href="https://www2.razer.com/au-en">RAZER</a></td>
+					<td><a href="https://www8.hp.com/au/en/home.html">HP</a></td>
+					<td><i class="fa fa-envelope" style="font-size:24px;color: #c39d6d;"></i> : <a href="mailto:H&H@support.com">H&H@support.com</a></td>
+				</tr>
+				<tr>
+					<td><a href="https://www.microsoft.com/en-au">MICROSOFT</a></td>
+					<td><a href="http://leapfroglobal.com/alcatroz/">ALCATROZ</a></td>
+					<td><i class="fa fa-globe" style="font-size:24px;color: #c39d6d;"></i> &nbsp;: 
+						<a href="#fb">Facebook</a> | 
+						<a href="#tw">Twitter</a> | 
+						<a href="#ig">Instagram</a></td>
+				</tr>
+				<tr>
+					<td rowspan="4"></td>
+				</tr>
+			</table>
+		</footer><hr/>
+		<div id="copy">&copy;2018 H&H ICT286 Assignment 2</div>
+	</body>
+</html>

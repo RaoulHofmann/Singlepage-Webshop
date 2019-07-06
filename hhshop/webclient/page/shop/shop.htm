@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns="http://www.w3.org/1999/html">
+	<head>
+		<meta charset="UTF-8">
+		<title>Shop</title>
+		<link rel="stylesheet" href="../../css/style.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<script src="shop.js"></script>
+        <script src="../../js/search.js"></script>
+    </head>
+	<body onload="getProducts();" onhashchange="getProducts();">
+		<header>
+			<nav>
+				<a href="../home/home.htm"><img class="logo-img" src="../../img/logo.jpg" width="100" height="100"/></a>
+				<ul>
+					<li><a href="../home/home.htm">HOME</a></li>
+					<li><a href="../about-contact/about-contact.htm#about">ABOUT</a></li>
+					<li>
+						<div class="dropdown">
+							<button class="dropbtn">SHOP <i class="fa fa-caret-down"></i></button>
+							<div class="dropdown-content">
+								<a id="keyboardLink" href="../shop/shop.htm#2">KEYBOARD</a>
+								<a id="mouseLink" href="../shop/shop.htm#3">MOUSE</a>
+								<a id="comboLink" href="../shop/shop.htm#1">COMBO</a>
+							</div>
+						</div>
+					</li>
+					<li><a href="../about-contact/about-contact.htm#contact">CONTACT</a></li>
+					<li>
+                        <form class="searchbar" id="searchbar" action="javascript:search();">
+							<button type="submit"><i class="fa fa-search"></i></button>
+							<input type="text" placeholder="Search.." name="search">
+						</form>
+					</li>
+					<li><a href="#cart" style="float:right"><i class="fa fa-shopping-cart"></i></a></li>
+					<li><a href="../login-register/login-register.htm" style="float:right"><i class="fa fa-user"></i></a></li>
+				</ul>
+			</nav>
+			<div class="centered">
+				<h1 id="shopTitle"></h1>
+			</div>
+		</header><hr/>
+		<section class="hidden" id="shop-list">
+			<table align="center" class="table-center-size" id="productTable"></table>
+		</section>
+		<section class="hidden" id="checkout">
+			<h3>C H E C K O U T </h3>
+			<div class="alignright">
+                <h3>Cart Total</h3>
+				<h3 id="carttotal"></h3>
+				<p>*Price includes shipping and taxes.</p>
+			</div>
+            <p id="checkOutMsg" style="display: none"></p>
+			<form id="checkout-details" action="javascript:checkOut()">
+                <input type="checkbox" id="sameAddress" value="sameAddress" onchange="javascript:fillAddress();">Use same Address?</input><br>
+					<input type="text" class="form-control" name="firstname" id="firstname" placeholder="FIRST NAME"/></br>					
+					<input type="text" class="form-control" name="lastname" id="lastname" placeholder="LAST NAME"/></br>					
+					<input type="text" class="form-control" name="email" id="email" placeholder="EMAIL"/></br>
+					<input type="text" class="form-control" name="phone" id="phone" placeholder="PHONE"/></br>	
+					<input type="text" class="form-control" name="street" id="street" placeholder="STREET ADDRESS"/></br>
+					<input type="text" class="form-control" name="postcode" id="postcode" placeholder="POSTCODE"/></br>
+					<input type="text" class="form-control" name="city" id="city" placeholder="CITY"/></br>
+					<input type="submit" class="form-button" name="checkout" value="CHECKOUT"/>
+                    <table class="checkoutTable" id="checkoutTable"></table>
+            </form>
+		</section>
+		<footer><hr/>
+			<table align="center" width="90%">
+				<tr>
+					<td><img src="../../img/logo.jpg" width="50" height="50"/></td>
+					<td colspan="2"><b>BRANDS</b></td>
+					<td><b>CONTACT</b></td>
+				</tr>
+				<tr>
+					<td rowspan="9">H&H leads with the Outcome – “brings all your communication together”.</td>
+					<td><a href="http://www.rapoo.com/">RAPOO</a></td>
+					<td><a href="http://www.gamdias.com/">GAMDIAS</a></td>
+					<td><i class="fa fa-location-arrow" style="font-size:24px;color: #c39d6d;"></i> &nbsp;: 90 South St, Murdoch WA 6150</td>
+				</tr>
+				<tr>
+					<td><a href="https://www.logitech.com/en-au/mice">LOGITECH</a></td>
+					<td><a href="https://au.msi.com/">MSI</a></td>
+					<td><i class="fa fa-phone" style="font-size:24px;color: #c39d6d;"></i> &nbsp;: <a href="tel:+61812345678">(08) 1234 5678</a></td>
+				</tr>
+				<tr>
+					<td><a href="https://www2.razer.com/au-en">RAZER</a></td>
+					<td><a href="https://www8.hp.com/au/en/home.html">HP</a></td>
+					<td><i class="fa fa-envelope" style="font-size:24px;color: #c39d6d;"></i> : <a href="mailto:H&H@support.com">H&H@support.com</a></td>
+				</tr>
+				<tr>
+					<td><a href="https://www.microsoft.com/en-au">MICROSOFT</a></td>
+					<td><a href="http://leapfroglobal.com/alcatroz/">ALCATROZ</a></td>
+					<td><i class="fa fa-globe" style="font-size:24px;color: #c39d6d;"></i> &nbsp;: 
+						<a href="#fb">Facebook</a> | 
+						<a href="#tw">Twitter</a> | 
+						<a href="#ig">Instagram</a></td>
+				</tr>
+				<tr>
+					<td rowspan="4"></td>
+				</tr>
+			</table>
+		</footer><hr/>
+		<div id="copy">&copy;2018 H&H ICT286 Assignment 2</div>
+	</body>
+</html>

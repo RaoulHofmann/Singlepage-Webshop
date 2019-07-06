@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" >
+	<head>
+		<meta charset="UTF-8">
+		<title>ABOUT-CONTACT</title>
+		<link rel="stylesheet" href="../../css/style.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<script src="about-contact.js"></script>
+	</head>
+	<body onload="getPage();" onhashchange="getPage();">
+		<header>
+			<nav>
+				<a href="../home/home.htm"><img class="logo-img" src="../../img/logo.jpg" width="100" height="100"/></a>
+				<ul>
+					<li><a href="../home/home.htm">HOME</a></li>
+					<li><a id="aboutLink" href="#about">ABOUT</a></li>
+					<li>
+						<div class="dropdown">
+							<button class="dropbtn">SHOP <i class="fa fa-caret-down"></i></button>
+							<div class="dropdown-content">
+								<a href="../shop/shop.htm#2">KEYBOARD</a>
+								<a href="../shop/shop.htm#3">MOUSE</a>
+								<a href="../shop/shop.htm#1">COMBO</a>
+							</div>
+						</div>
+					</li>
+					<li><a id="contactLink" href="#contact">CONTACT</a></li>
+					<li>
+                        <form class="searchbar" id="searchbar" action="javascript:search();">
+							<button type="submit"><i class="fa fa-search"></i></button>
+							<input type="text" placeholder="Search.." name="search">
+						</form>
+					</li>
+					<li><a href="../shop/shop.htm#cart" style="float:right"><i class="fa fa-shopping-cart"></i></a></li>
+					<li><a href="../login-register/login-register.htm" style="float:right"><i class="fa fa-user"></i></a></li>
+				</ul>
+			</nav>
+			<div class="centered">
+				<h1 id="about-contact-title"></h1>
+			</div>
+		</header><hr/>
+		<section class="hidden" id="about_company">
+			<article>
+				<h2>A B O U T H&amp;H</h2>
+				<img src="../../img/about.jpg" alt="company" width="40%" height="15%"/>
+				<p>
+					The passion for technology appeared before the one for entrepreneurship, because we’ve always liked to discover what mechanisms hide behind the devices, how systems work and how can they be optimized. We thought about how we can contribute from here, from Perth, in a world of IT giants. And we asked ourself at what level can we create and export Australian technology.
+					<br/><br/>
+					We started on 2018 and begin to adventure in the field of electronics and input devices items, driven by the will to create, on a long term basis, the products and their necessary components for developing a smart and comfortable device, where everything is digitalized and controlled. 
+					<br/><br/>
+					We are passionate about technology and will continue to expand our product, as we did when we first started with the gadget development. The partnerships made with the IT giants, like Microsoft and Razer, give us faith that we are on the right path.
+				</p>
+			</article><hr/>
+		</section>
+		<section class="hidden" id="about_team">
+			<h2 style="text-align:center;">T H E &nbsp; T E A M</h2>
+			<div style="height:400px;">
+			<section align="center">
+				<img src="../../img/aboutraoul.jpg" alt="huardy" width="300px" height="300px"/>
+				<p><b>RAOUL HOFMANN</b><br/>CEO</p>
+			</section>
+			<section align="center">
+				<img src="../../img/about_leo.jpg" alt="huardy" width="300px" height="300px"/>
+				<p><b>LEONARDO RIO HUARDY</b><br/>CEO</p>
+			</section>
+			</div>
+		</section>
+		<section class="hidden" id="contact">
+			<h2 style="text-align:center;">C O N T A C T</h2>
+
+			<div style="height:125px;">
+			<section align="center">
+				<i class="fa fa-location-arrow" style="font-size:36px;color: #c39d6d;"></i><br/>
+				<b>ADDRESS</b><br/>
+				90 South St, Murdoch<br/> WA 6150
+			</section>
+			<section align="center">
+				<i class="fa fa-phone" style="font-size:36px;color: #c39d6d;"></i><br/>
+				<b>PHONE</b><br/>
+				Sales: <a href="tel:+61812345678">(08) 1234 5678</a></br>
+				Support: <a href="tel:+61856781234">(08) 5679 1234</a>
+			</section>		
+			<section align="center">
+				<i class="fa fa-envelope" style="font-size:36px;color: #c39d6d;"></i><br/>
+				<b>EMAIL</b><br/>
+				Sales: <a href="mailto:H&H@sales.com">H&H@sales.com</a><br/>
+				Support: <a href="mailto:H&H@support.com">H&H@support.com</a>
+			</section>
+			</div>
+		</section>
+		<footer><hr/>
+			<table align="center" width="90%">
+				<tr>
+					<td><img src="../../img/logo.jpg" width="50" height="50"/></td>
+					<td colspan="2"><b>BRANDS</b></td>
+					<td><b>CONTACT</b></td>
+				</tr>
+				<tr>
+					<td rowspan="9">H&H leads with the Outcome – “brings all your communication together”.</td>
+					<td><a href="http://www.rapoo.com/">RAPOO</a></td>
+					<td><a href="http://www.gamdias.com/">GAMDIAS</a></td>
+					<td><i class="fa fa-location-arrow" style="font-size:24px;color: #c39d6d;"></i> &nbsp;: 90 South St, Murdoch WA 6150</td>
+				</tr>
+				<tr>
+					<td><a href="https://www.logitech.com/en-au/mice">LOGITECH</a></td>
+					<td><a href="https://au.msi.com/">MSI</a></td>
+					<td><i class="fa fa-phone" style="font-size:24px;color: #c39d6d;"></i> &nbsp;: <a href="tel:+61812345678">(08) 1234 5678</a></td>
+				</tr>
+				<tr>
+					<td><a href="https://www2.razer.com/au-en">RAZER</a></td>
+					<td><a href="https://www8.hp.com/au/en/home.html">HP</a></td>
+					<td><i class="fa fa-envelope" style="font-size:24px;color: #c39d6d;"></i> : <a href="mailto:H&H@support.com">H&H@support.com</a></td>
+				</tr>
+				<tr>
+					<td><a href="https://www.microsoft.com/en-au">MICROSOFT</a></td>
+					<td><a href="http://leapfroglobal.com/alcatroz/">ALCATROZ</a></td>
+					<td><i class="fa fa-globe" style="font-size:24px;color: #c39d6d;"></i> &nbsp;: 
+						<a href="#fb">Facebook</a> | 
+						<a href="#tw">Twitter</a> | 
+						<a href="#ig">Instagram</a></td>
+				</tr>
+				<tr>
+					<td rowspan="4"></td>
+				</tr>
+			</table>
+		</footer><hr/>
+		<div id="copy">&copy;2018 H&H ICT286 Assignment 2</div>
+	</body>
+</html>

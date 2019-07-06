@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" >
+	<head>
+		<meta charset="UTF-8">
+		<title>Home</title>
+		<link rel="stylesheet" href="../../css/style.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<script src="home.js"></script>
+	</head>
+	<body onload="checkLogin();">
+		<header>
+			<img src="../../img/home.jpg" width="100%" style="opacity:0.7;"/>
+			<nav style="position:fixed;">
+				<a href="home.htm"><img class="logo-img" src="../../img/logo.jpg" width="100" height="100"/></a>
+				<ul>
+					<li><a class="active" href="home.htm">HOME</a></li>
+					<li><a href="../about-contact/about-contact.htm#about">ABOUT</a></li>
+					<li>
+						<div class="dropdown">
+							<button class="dropbtn">SHOP <i class="fa fa-caret-down"></i></button>
+							<div class="dropdown-content">
+								<a href="../shop/shop.htm#2">KEYBOARD</a>
+								<a href="../shop/shop.htm#3">MOUSE</a>
+								<a href="../shop/shop.htm#1">COMBO</a>
+							</div>
+						</div>
+					</li>
+					<li><a href="../about-contact/about-contact.htm#contact">CONTACT</a></li>
+					<li>
+                        <form class="searchbar" id="searchbar" action="javascript:search();">
+							<button type="submit"><i class="fa fa-search"></i></button>
+							<input type="text" placeholder="Search.." name="search">
+						</form>
+					</li>
+					<li><a href="../shop/shop.htm#cart" style="float:right"><i class="fa fa-shopping-cart"></i></a></li>
+					<li><a href="../login-register/login-register.htm" style="float:right"><i class="fa fa-user"></i></a></li>
+				</ul>
+			</nav>
+            <div class="success">
+                <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+                Log-in successful
+            </div>
+			<div class="centered">
+				<h1>H&amp;H</h1>
+			</div>
+		</header><hr/>
+		<section>
+			<table align="center" class="feature-block">
+				<tr>
+					<td bgcolor="#F5F5F5">
+						<i class="fa fa-plane" style="font-size:24px;color: #c39d6d;"></i><br/>
+						<h3>FREE SHIPPING</h3>
+						Free worldwide shipping
+					</td>
+					<td bgcolor="#F1F1F1">
+						<i class="fa fa-clock-o" style="font-size:24px;color: #c39d6d;"></i><br/>
+						<h3>FAST DELIVERY</h3>
+						Fast worldwide delivery
+					</td>
+					<td bgcolor="#F8F8F8">
+						<i class="fa fa-money" style="font-size:24px;color: #c39d6d;"></i><br/>
+						<h3>MONEY BACK</h3>
+						7 Days money back guarantee
+					</td>
+				</tr>
+			</table>
+		</section><hr/>
+		<section>
+			<h1>L A T E S T &nbsp; P R O D U C T S</h1>
+			<table align="center" border="0" class="table-center-size">
+				<tr>
+					<td>
+						<img src="../../img/combo/4.jpg"/><br/>
+						ALCATROZ Xplorer 5500M Red Wired K/M<br/>
+						$15.00<br/>
+						<a href="../shop/shop.htm#1"><i class="fa fa-cart-plus" style="font-size:24px;color: #c39d6d;"></i></a>
+					</td>
+					<td>
+						<img src="../../img/mouse/wired/24.jpg"/><br/>
+						ALCATROZ X-Craft TREK 1000 Color Wired Mouse<br/>
+						$12.00<br/>
+						<a href="../shop/shop.htm#3"><i class="fa fa-cart-plus" style="font-size:24px;color: #c39d6d;"></i></a>
+					</td>
+					<td>
+						<img src="../../img/combo/7.jpg" width="300px"/><br/>
+						MICROSOFT WLSTP850 Black Wired K/M<br/>
+						$30.00<br/>
+						<a href="../shop/shop.htm#1"><i class="fa fa-cart-plus" style="font-size:24px;color: #c39d6d;"></i></a>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<img src="../../img/keyboard/wireless/16.jpg"/><br/>
+						ALCATROZ TRILIUM BTR1 Black Wireless Keyboard<br/>
+						$35.00<br/>
+						<a href="../shop/shop.htm#2"><i class="fa fa-cart-plus" style="font-size:24px;color: #c39d6d;"></i></a>
+					</td>
+					<td>
+						<img src="../../img/mouse/wired/30.jpg"/><br/>
+						RAZER RZ-DIAMONDBLACK-CHROMA Black WIred Mouse<br/>
+						$69.00<br/>
+						<a href="../shop/shop.htm#3"><i class="fa fa-cart-plus" style="font-size:24px;color: #c39d6d;"></i></a>
+					</td>
+					<td>
+						<img src="../../img/keyboard/wired/11.jpg"/><br/>
+						ALCATROZ Xplorer M550 Green Wired Keyboard<br/>
+						$7.00<br/>
+						<a href="../shop/shop.htm#2"><i class="fa fa-cart-plus" style="font-size:24px;color: #c39d6d;"></i></a>
+					</td>
+				</tr>
+			</table>
+		</section><hr/>
+		<footer>
+			<table align="center" width="90%">
+				<tr>
+					<td><img src="../../img/logo.jpg" width="50" height="50"/></td>
+					<td colspan="2"><b>BRANDS</b></td>
+					<td><b>CONTACT</b></td>
+				</tr>
+				<tr>
+					<td rowspan="9">H&H leads with the Outcome "brings all your communication together."</td>
+					<td><a href="http://www.rapoo.com/">RAPOO</a></td>
+					<td><a href="http://www.gamdias.com/">GAMDIAS</a></td>
+					<td><i class="fa fa-location-arrow" style="font-size:24px;color: #c39d6d;"></i> &nbsp;: 90 South St, Murdoch WA 6150</td>
+				</tr>
+				<tr>
+					<td><a href="https://www.logitech.com/en-au/mice">LOGITECH</a></td>
+					<td><a href="https://au.msi.com/">MSI</a></td>
+					<td><i class="fa fa-phone" style="font-size:24px;color: #c39d6d;"></i> &nbsp;: <a href="tel:+61812345678">(08) 1234 5678</a></td>
+				</tr>
+				<tr>
+					<td><a href="https://www2.razer.com/au-en">RAZER</a></td>
+					<td><a href="https://www8.hp.com/au/en/home.html">HP</a></td>
+					<td><i class="fa fa-envelope" style="font-size:24px;color: #c39d6d;"></i> : <a href="mailto:H&H@support.com">H&H@support.com</a></td>
+				</tr>
+				<tr>
+					<td><a href="https://www.microsoft.com/en-au">MICROSOFT</a></td>
+					<td><a href="http://leapfroglobal.com/alcatroz/">ALCATROZ</a></td>
+					<td><i class="fa fa-globe" style="font-size:24px;color: #c39d6d;"></i> &nbsp;: 
+						<a href="#fb">Facebook</a> | 
+						<a href="#tw">Twitter</a> | 
+						<a href="#ig">Instagram</a></td>
+				</tr>
+				<tr>
+					<td rowspan="4"></td>
+				</tr>
+			</table>
+		</footer><hr/>
+		<div id="copy">&copy;2018 H&H ICT286 Assignment 2</div>
+	</body>
+</html>
